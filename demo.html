@@ -3,7 +3,7 @@
 
 <head>
 <title>SelectPlus Demo</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="select-plus.js"></script>
 <link rel="stylesheet" href="select-plus.css" />
 <style type="text/css">
@@ -11,6 +11,9 @@ html, body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
+body {
+    padding-bottom: 300px;
+}
 #original {
     padding: 3px;
     border-radius: 3px;
@@ -23,10 +26,10 @@ html, body {
 $(document).ready(function(){
 	// select with local data
 	$('#local').selectplus();
-	
+
 	// select with remote data
 	$('#remote').selectplus({
-        remote: { 
+        remote: {
             url: 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=ju6z9mjyajq2djue3gbvv26t',
             pageSize: {label: 'page_limit', value: 20},
             page: {label: 'page', value:1},
@@ -44,7 +47,7 @@ $(document).ready(function(){
 
 <body>
 	<h1>SelectPlus Demo</h1>
-    
+
     <h2>Select element with local data</h2>
     <p>SelectPlus allows you to turn this:</p>
 <select id="original" name="original" style="width:300px">
